@@ -18,5 +18,5 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - name: run a one liner
-        run: echo " RUnning at log level: ${{ github.event.inputs.loglevel }}"
+      - name: Run a one-line script
+        run: echo "Hello this is a workflow template running log level ${{ github.event.inputs.logLevel }}" 
