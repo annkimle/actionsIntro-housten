@@ -1,0 +1,22 @@
+name: Demo One
+
+on:
+  push:
+    branches:
+      - main
+      - demo
+  workflow_dispatch:
+    inputs:
+      loglevel:
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+        default: info
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run a one liner
+        run: echo " RUnning at log level: ${{ github.event.inputs.loglevel }}
