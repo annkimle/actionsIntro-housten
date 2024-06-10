@@ -1,0 +1,13 @@
+name: 'Container Welcome'
+inputs:
+  who-to-greet:
+    description: 'Who is there?'
+    default: 'attendees'
+outputs:
+  time:
+    description: 'when it happened'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - ${{ inputs.who-to-greet }}
