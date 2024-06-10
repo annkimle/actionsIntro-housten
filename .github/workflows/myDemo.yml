@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run a one liner
-        run: echo " RUnning at log level: ${{ github.event.inputs.loglevel }}
+        run: echo " RUnning at log level: ${{ github.event.inputs.loglevel }}"
